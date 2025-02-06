@@ -138,7 +138,13 @@ with st.sidebar:
 st.subheader("LiMO, Light finance's helper", divider="rainbow", anchor=False)
 
 # Initialize Groq client
-client = Groq(api_key=st.secrets["GROQ_API_KEY"])
+# Assuming you've set the environment variable 'GROQ_API_KEY' in your cloud environment
+api_key = os.getenv("GROQ_API_KEY")
+
+if api_key:
+    client = Groq(api_key=api_key)
+else:
+    raise ValueError("API key not found!")
 
 # Initialize session state
 if "messages" not in st.session_state:
