@@ -1,0 +1,14 @@
+streamlit
+groq
+langchain
+langchain-groq
+python-dotenv
+faiss-cpu
+InstructorEmbedding
+PyPDF2
+langchain-community
+langchain-experimental
+pdfplumber
+sentence-transformers
+langchain-huggingface
+torch
